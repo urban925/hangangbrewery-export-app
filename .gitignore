@@ -1,0 +1,22 @@
+# 파이썬
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log
+
+# IDE
+.vscode/
+.idea/
+
+# 환경변수
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
