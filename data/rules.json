@@ -1,7 +1,100 @@
 {
   "rules": {
-    "rule0": "마스터리스트 필수 준수",
-    "rule3": "(업체) vs (기타) 구분",
-    "rule7": "업체명 정규화"
+    "rule0": {
+      "title": "마스터리스트 필수 준수 (MANDATORY)",
+      "description": "A열(수화주)과 B열(물품) 입력 시 반드시 마스터리스트의 정규화된 값을 사용",
+      "requirement": "예외 없음. 마스터리스트에 없는 항목은 Code(업체) 시트에 먼저 추가 후 사용"
+    },
+    "rule3": {
+      "title": "(업체) vs (기타) 구분",
+      "default": "(업체)",
+      "kakaotalk_indicators": {
+        "직접수령": "(기타)",
+        "선불퀵_출고": "(기타)",
+        "택배발송": "(업체)",
+        "냉장출고": "(기타)",
+        "무상출고": "제외",
+        "병_단위": "제외"
+      },
+      "company_exceptions": {
+        "케이티엠": "기본값 (기타)",
+        "딸꾹_직매장": "직접수령 → (기타), 평소 → (업체)",
+        "우리도가": "선불퀵 → 모든 제품 (기타), 컬리납품 → (기타)",
+        "해일_군납": "항상 (기타)"
+      }
+    },
+    "rule7": {
+      "title": "업체명 정규화",
+      "bracket_removal": {
+        "rule": "(주), (유) 제거",
+        "examples": [
+          "(주)해일 → 해일",
+          "(유)우리술상회(지점명) → 우리술상회(지점명)"
+        ]
+      },
+      "branch_handling": {
+        "simple_location": "제거",
+        "parenthesis_branch": "유지",
+        "examples": [
+          "주유별장광화문점 → 주유별장",
+          "우리술상회(강남지점) → 우리술상회(강남지점)"
+        ]
+      },
+      "bidirectional_mapping": {
+        "우리도가_술마켓": {
+          "no_branch": "우리도가",
+          "with_branch": "술마켓(지점명)"
+        }
+      },
+      "special_companies": {
+        "의창": "의창발주(지점) → 의창실업(라빈리커샵 지점스타필드점)",
+        "딸꾹_직매장": "딸꾹",
+        "fermentation_heaven": "한글 번역 금지"
+      }
+    },
+    "rule13": {
+      "title": "물품명 드롭다운 검증",
+      "location": "업체 출고표 시트의 B2:B197 범위",
+      "validation_type": "List (드롭다운)",
+      "validation_range": "Code(업체)!$A$2:$A$15",
+      "purpose": "정규화된 물품명만 입력하도록 강제"
+    },
+    "product_normalization": {
+      "title": "물품명 정규화",
+      "rules": {
+        "spacing": "띄어쓰기 정규화 필수",
+        "bracket_handling": {
+          "naru_glim_ttal": "(업체) 또는 (기타) 필수 포함",
+          "ananti_easel": "괄호 제거"
+        },
+        "abbreviation": {
+          "ttal_ba": "딸바 → 딸기바질"
+        }
+      },
+      "examples": [
+        "나루6도6병(업체) → 나루 6도 6병(업체)",
+        "글림5병 → 글림 5병",
+        "딸바 8병(기타) → 딸기바질 8병(기타)",
+        "아난티 생막걸리 8병(업체) → 아난티 생막걸리 8병"
+      ]
+    },
+    "special_handling": {
+      "kakaotalk_processing": {
+        "ignore": "발신자/시간 헤더 무시",
+        "extract": "업체명, 품목, 수량만 추출"
+      },
+      "ananti_orders": {
+        "rule": "담당자 이름·전화번호 동봉 시 자동 비교",
+        "action": "다르면 카톡 번호로 덮어쓰기"
+      },
+      "easel_stores": {
+        "format": "어슬 광화문 (어슬 + 지점명)",
+        "exception": "어슬 생막걸리 8병은 괄호 없음"
+      },
+      "military_supply": {
+        "default": "품목 미명시 → 나루 6도 6병(기타)",
+        "special_companies": "케이티엠, 고성주류, 계자람 → 항상 나루 6도 6병(기타)"
+      }
+    }
   }
 }
