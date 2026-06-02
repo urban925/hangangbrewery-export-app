@@ -1,9 +1,40 @@
 {
   "products": [
-    {
-      "id": 1,
-      "name": "나루 6도 6병(업체)",
-      "normalized": "나루 6도 6병(업체)"
-    }
+    {"id": 1, "original": "나루 6도 6병(업체)", "normalized": "나루 6도 6병(업체)"},
+    {"id": 2, "original": "나루 6도 6병(기타)", "normalized": "나루 6도 6병(기타)"},
+    {"id": 3, "original": "나루6도6병(업체)", "normalized": "나루 6도 6병(업체)"},
+    {"id": 4, "original": "나루6도6병(기타)", "normalized": "나루 6도 6병(기타)"},
+    {"id": 5, "original": "나루 11.5도 8병(업체)", "normalized": "나루 11.5도 8병(업체)"},
+    {"id": 6, "original": "나루 11.5도 8병(기타)", "normalized": "나루 11.5도 8병(기타)"},
+    {"id": 7, "original": "나루11.5도8병(업체)", "normalized": "나루 11.5도 8병(업체)"},
+    {"id": 8, "original": "나루11.5도8병(기타)", "normalized": "나루 11.5도 8병(기타)"},
+    {"id": 9, "original": "글림 5병(업체)", "normalized": "글림 5병(업체)"},
+    {"id": 10, "original": "글림 5병(기타)", "normalized": "글림 5병(기타)"},
+    {"id": 11, "original": "글림5병(업체)", "normalized": "글림 5병(업체)"},
+    {"id": 12, "original": "글림5병(기타)", "normalized": "글림 5병(기타)"},
+    {"id": 13, "original": "글림 선물세트 5병(업체)", "normalized": "글림 선물세트 5병(업체)"},
+    {"id": 14, "original": "글림 선물세트 5병(기타)", "normalized": "글림 선물세트 5병(기타)"},
+    {"id": 15, "original": "글림선물세트5병(업체)", "normalized": "글림 선물세트 5병(업체)"},
+    {"id": 16, "original": "글림선물세트5병(기타)", "normalized": "글림 선물세트 5병(기타)"},
+    {"id": 17, "original": "딸기바질 4병(업체)", "normalized": "딸기바질 4병(업체)"},
+    {"id": 18, "original": "딸기바질 4병(기타)", "normalized": "딸기바질 4병(기타)"},
+    {"id": 19, "original": "딸바 4병(업체)", "normalized": "딸기바질 4병(업체)"},
+    {"id": 20, "original": "딸바 4병(기타)", "normalized": "딸기바질 4병(기타)"},
+    {"id": 21, "original": "딸기바질4병(업체)", "normalized": "딸기바질 4병(업체)"},
+    {"id": 22, "original": "딸기바질4병(기타)", "normalized": "딸기바질 4병(기타)"},
+    {"id": 23, "original": "딸기바질 8병(업체)", "normalized": "딸기바질 8병(업체)"},
+    {"id": 24, "original": "딸기바질 8병(기타)", "normalized": "딸기바질 8병(기타)"},
+    {"id": 25, "original": "딸바 8병(업체)", "normalized": "딸기바질 8병(업체)"},
+    {"id": 26, "original": "딸바 8병(기타)", "normalized": "딸기바질 8병(기타)"},
+    {"id": 27, "original": "딸기바질8병(업체)", "normalized": "딸기바질 8병(업체)"},
+    {"id": 28, "original": "딸기바질8병(기타)", "normalized": "딸기바질 8병(기타)"},
+    {"id": 29, "original": "아난티 생막걸리 8병(업체)", "normalized": "아난티 생막걸리 8병"},
+    {"id": 30, "original": "아난티 생막걸리 8병(기타)", "normalized": "아난티 생막걸리 8병"},
+    {"id": 31, "original": "아난티 생막걸리 8병", "normalized": "아난티 생막걸리 8병"},
+    {"id": 32, "original": "아난티생막걸리8병", "normalized": "아난티 생막걸리 8병"},
+    {"id": 33, "original": "어슬 생막걸리 8병(업체)", "normalized": "어슬 생막걸리 8병"},
+    {"id": 34, "original": "어슬 생막걸리 8병(기타)", "normalized": "어슬 생막걸리 8병"},
+    {"id": 35, "original": "어슬 생막걸리 8병", "normalized": "어슬 생막걸리 8병"},
+    {"id": 36, "original": "어슬생막걸리8병", "normalized": "어슬 생막걸리 8병"}
   ]
 }
