@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     // 백엔드 API에서 마스터 리스트 조회
-    axios.get('http://localhost:8000/api/master-lists')
+    axios.get('https://hangangbrewery-export-app.onrender.com/api/master-lists')
       .then(response => {
         setMasterList(response.data)
         setLoading(false)
