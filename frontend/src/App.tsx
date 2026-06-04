@@ -27,11 +27,11 @@ function App() {
   useEffect(() => {
     // 백엔드 API에서 마스터 리스트 조회
     axios.get('https://hangangbrewery-export-app.onrender.com/api/master-lists')
-      .then(response => {
+      .then((response: any) => {
         setMasterList(response.data)
         setLoading(false)
       })
-      .catch(err => {
+      .catch((err: any) => {
         setError('API 호출 실패: ' + err.message)
         setLoading(false)
       })
